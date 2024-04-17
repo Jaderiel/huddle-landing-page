@@ -20,6 +20,9 @@ module.exports = {
       fontFamily: {
         'raleway': ['Raleway', 'sans-serif'],
       },
+      colors: {
+        customYellow: '#FAFD5C',
+      },
     },
   },
   plugins: [],

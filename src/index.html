@@ -4,60 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap">
 </head>
-<body>
-    <div class="bg-orange-500">
-        <section class="bg-black text-white p-7 flex items-center content-center justify-between pl-10 pr-10 font-raleway">
-            <div>
-                <h1 class="whitespace-nowrap"">
-                    <span class="hidden sm:inline">Huddle App by HelpeerZ</span>
-                    <span class="md:hidden">Huddle</span>
-                </h1>
-            </div>
-            
-            <div class="flex items-center content-center gap-24">
-                <div class="hidden md:flex gap-10">
-                    <p>Home</p>
-                    <p>Benefits</p>
-                    <p>Our Team</p>
-                    <p>The Company</p>
-                </div>
-                
-                <div>
-                    <p class="whitespace-nowrap hidden x-sm:inline">Try Huddle Now</p>
-                </div>
-
-                <div class="md:hidden">
-                    <!-- Add a button to toggle the menu -->
+<body class="font-raleway">
+    <div class="navigation">
+        <div class="nav">
+            <section class="bg-black text-white p-7 flex items-center content-center justify-between pl-10 pr-10 font-raleway">
+                <div class="md:hidden flex items-center">
                     <button id="burger-menu-btn" class="text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
                         </svg>
                     </button>
+                </div>
+    
+                <div>
+                    <h1 class="whitespace-nowrap hover:cursor-pointer">
+                        <a href="index.html" class="hidden sm:inline font-bold">Huddle App by HelpeerZ</a>
+                        <a href="index.html" class="md:hidden font-bold">Huddle</a>
+                    </h1>
+                </div>
+                
+                <div class="flex items-center content-center gap-24">
+                    <div class="hidden md:flex gap-10">
+                        <p class="border-b-2 border-transparent cursor-pointer">
+                            <a href="index.html" id="home-link-desktop" class="hover:border-b-4 border-customYellow">Home</a>
+                        </p>
+                        <p class="border-b-2 border-transparent cursor-pointer">
+                            <span class="hover:border-b-4 border-customYellow">Features</span>
+                        </p>
+                        <p class="border-b-2 border-transparent cursor-pointer">
+                            <span class="hover:border-b-4 border-customYellow">Our Team</span>
+                        </p>
+                        <p class="border-b-2 border-transparent cursor-pointer">
+                            <a href="https://www.helpeerz.com/" class="hover:border-b-4 border-customYellow">Company</a>
+                        </p>
+                    </div>
                     
-                    <!-- Hidden menu items, initially not visible -->
-                    <div id="burger-menu" class="hidden absolute top-16 right-0 bg-black text-white p-4">
-                        <p>Home</p>
-                        <p>Benefits</p>
-                        <p>Our Team</p>
-                        <p>The Company</p>
+                    <div class="default-button hidden x-sm:flex">
+                        <button class="whitespace-nowrap font-bold">Try Huddle Now</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="side-nav md:hidden">
+            <div id="sideNav" class="bg-gray-900 text-white md:hidden">
+                <div class="p-6 h-screen">
+                    <p class="border-b-2 border-transparent cursor-pointer mb-4">
+                        <a href="index.html" id="home-link-mobile" class="hover:border-b-4 border-yellow-500">Home</a>
+                    </p>
+                    <p class="border-b-2 border-transparent cursor-pointer mb-4">
+                        <span class="hover:border-b-4 border-yellow-500">Features</span>
+                    </p>
+                    <p class="border-b-2 border-transparent cursor-pointer mb-4">
+                        <span class="hover:border-b-4 border-yellow-500">Our Team</span>
+                    </p>
+                    <p class="border-b-2 border-transparent cursor-pointer mb-4">
+                        <a href="https://www.helpeerz.com/" class="hover:border-b-4 border-yellow-500">Company</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section-container" class="">
+
+        <div class="flex flex-col lg:flex-row p-8 lg:p-32"> <!-- Use flex-col for smaller devices, flex-row for larger devices -->
+            <div class="lg:w-9/12 lg:mr-4"> <!-- Use 9/12 width for larger devices -->
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <h1 class="font-black text-3xl lg:text-6xl">Streamline your Daily Stand-Ups with Huddle!</h1> <!-- Use smaller font size for smaller devices -->
+                    </div>
+                    <div>
+                        <p>Huddle revolutionizes team communication, catering to remote work, different time zones, and your preference for asynchronous updates.</p>
+                    </div>
+                    <div class="">
+                        <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8"> <!-- Adjust button size for smaller devices -->
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg></button>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="lg:w-3/12 flex justify-center mt-8 lg:mt-0"> <!-- Use 3/12 width for larger devices -->
+                <img src="./img/huddle.png" alt="" class="h-64"> <!-- Use fixed height for the image -->
+            </div>
+        </div>
+        
+        
+        
 
-        <section class="bg-blue-500">
-            <h1 class="text-3xl font-bold">
-                section
-            </h1>
-        </section>
     </div>
 </body>
 <script>
-    // JavaScript to toggle the visibility of the burger menu
-    document.getElementById('burger-menu-btn').addEventListener('click', function() {
-        document.getElementById('burger-menu').classList.toggle('hidden');
+    const sideNav = document.querySelector('.side-nav');
+    const burgerMenuBtn = document.getElementById('burger-menu-btn');
+    const mobileMenuBtn = document.querySelector('.md\\:hidden #burger-menu-btn');
+
+    burgerMenuBtn.addEventListener('click', () => {
+        sideNav.classList.toggle('hidden');
     });
+
+    const resizeObserver = new ResizeObserver(entries => {
+        for (let entry of entries) {
+            if (entry.contentBoxSize) {
+                const isButtonHidden = entry.contentBoxSize[0].inlineSize === 0;
+                if (isButtonHidden) {
+                    sideNav.classList.add('hidden');
+                }
+            }
+        }
+    });
+
+    resizeObserver.observe(mobileMenuBtn);
+
 </script>
+
 </html>

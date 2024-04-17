@@ -1,0 +1,25 @@
+.default-button {
+    cursor: pointer;
+    background-color: #FAFD5C;
+    color: black;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    /* width: 145px; */
+}
+
+.default-button:hover {
+    cursor: pointer;
+    background-color: #feffb0;
+}
+
+.side-nav {
+    flex: 0 0 300px; /* Set the width of the side nav */
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+}
+
+/* Main Navigation Bar Styling */
+.nav {
+    flex-grow: 1; /* Allow the main content to grow and fill remaining space */
+}
