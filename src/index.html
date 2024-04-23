@@ -79,14 +79,14 @@
                         <p>Huddle revolutionizes team communication, catering to remote work, different time zones, and your preference for asynchronous updates.</p>
                     </div>
                     <div class="">
-                        <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8"> <!-- Adjust button size for smaller devices -->
+                        <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                         </svg></button>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-3/12 flex justify-center mt-8 lg:mt-0"> <!-- Use 3/12 width for larger devices -->
-                <img src="./img/huddle-removebg-preview.png" alt="" class="h-64"> <!-- Use fixed height for the image -->
+            <div class="lg:w-3/12 flex justify-center mt-8 lg:mt-0">
+                <img src="./img/huddle-removebg-preview.png" alt="" class="h-64">
             </div>
         </div>
         
@@ -180,7 +180,7 @@
                 <div class="flex flex-col items-center gap-4">
                     <h1 class="font-bold text-3xl text-center">Ready to Revolutionize Your Stand-Ups?</h1>
                     <div class="">
-                        <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8"> <!-- Adjust button size for smaller devices -->
+                        <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                         </svg></button>
                     </div>
@@ -239,11 +239,11 @@
 
     document.querySelectorAll('.pagination .page-item').forEach((item, index) => {
         item.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent the default behavior (scrolling)
-            currentIndex = index; // Set currentIndex to the clicked number's index
-            teamImage.src = images[currentIndex]; // Update the image source
-            updatePageNumbers(currentIndex); // Update the appearance of the pagination numbers
-            animatePageChange(currentIndex); // Optional: Add animation if needed
+            event.preventDefault(); 
+            currentIndex = index; 
+            teamImage.src = images[currentIndex];
+            updatePageNumbers(currentIndex); 
+            animatePageChange(currentIndex); 
         });
     });
 
