@@ -32,18 +32,18 @@
                             <a href="index.html" id="home-link-desktop" class="hover:border-b-4 border-customYellow">Home</a>
                         </p>
                         <p class="border-b-2 border-transparent cursor-pointer">
-                            <span class="hover:border-b-4 border-customYellow">Features</span>
+                            <a href="#features" class="hover:border-b-4 border-customYellow">Features</a>
                         </p>
                         <p class="border-b-2 border-transparent cursor-pointer">
-                            <span class="hover:border-b-4 border-customYellow">Our Team</span>
+                            <a href="#meet-our-team" class="hover:border-b-4 border-customYellow">Our Team</a>
                         </p>
                         <p class="border-b-2 border-transparent cursor-pointer">
-                            <a href="https://www.helpeerz.com/" class="hover:border-b-4 border-customYellow">Company</a>
+                            <a href="#company" class="hover:border-b-4 border-customYellow">Company</a>
                         </p>
                     </div>
                     
                     <div class="default-button hidden x-sm:flex">
-                        <button class="whitespace-nowrap font-bold">Try Huddle Now</button>
+                        <a href="https://huddle-testing-exim2.ondigitalocean.app/"><button class="whitespace-nowrap font-bold">Try Huddle Now</button></a>
                     </div>
                 </div>
             </section>
@@ -55,13 +55,13 @@
                         <a href="index.html" id="home-link-mobile" class="hover:border-b-4 border-yellow-500">Home</a>
                     </p>
                     <p class="border-b-2 border-transparent cursor-pointer mb-4">
-                        <span class="hover:border-b-4 border-yellow-500">Features</span>
+                        <a href="#features" class="hover:border-b-4 border-yellow-500">Features</a>
                     </p>
                     <p class="border-b-2 border-transparent cursor-pointer mb-4">
-                        <span class="hover:border-b-4 border-yellow-500">Our Team</span>
+                        <a href="#meet-our-team" class="hover:border-b-4 border-yellow-500">Our Team</a>
                     </p>
                     <p class="border-b-2 border-transparent cursor-pointer mb-4">
-                        <a href="https://www.helpeerz.com/" class="hover:border-b-4 border-yellow-500">Company</a>
+                        <a href="#company" class="hover:border-b-4 border-yellow-500">Company</a>
                     </p>
                 </div>
             </div>
@@ -79,9 +79,11 @@
                         <p>Huddle revolutionizes team communication, catering to remote work, different time zones, and your preference for asynchronous updates.</p>
                     </div>
                     <div class="">
-                        <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8">
+                        <a href="https://huddle-testing-exim2.ondigitalocean.app/">
+                            <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                         </svg></button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -90,10 +92,11 @@
             </div>
         </div>
         
-        <div class="pl-6 pr-6 pt-6 sm:pl-10 sm:pr-6 md:pl-32 md:pr-32">
+        <div id="features" class="pl-6 pr-6 pt-6 sm:pl-10 sm:pr-6 md:pl-32 md:pr-32">
             <div>
                 <div class=" flex justify-center pt-4 pb-4">
                     <h1 class="font-bold text-3xl">Why use Huddle?</h1>
+                    <!-- <div class="bg-customYellow h-14 w-14">rocket</div> -->
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
                     <div class=" p-14 shadow-2xl hover:shadow-xl transition duration-300">
@@ -120,7 +123,7 @@
             </div>
         </div>
         
-        <div class=" flex flex-col gap-10 p-6 sm:p-16 md:p-32">
+        <div id="meet-our-team" class=" flex flex-col gap-10 p-6 sm:p-16 md:p-32">
             <div class="flex justify-center">
                 <h1 class="font-bold text-3xl">Meet our Team</h1>
             </div>
@@ -164,7 +167,7 @@
                 </div>
                 <div class="lg:order-1 flex flex-col gap-4 lg:justify-between items-center pr-10 pl-10">
                     <p class="text-center">HelpeerZ is an ethically designed social networking platform that aims to allow collaboration among various individuals and organizations through project development for personal, academic, career, business, and community growth.</p>
-                    <div class=" bg-black text-white w-40 p-4 rounded-sm">
+                    <div class=" bg-black text-white w-40 p-4 rounded-md hover:bg-gray-900">
                         <a href="https://www.helpeerz.com/">
                             <button class="flex gap-4 font-bold">Learn More<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -175,24 +178,34 @@
             </div>
         </div>
 
-        <div class="bg-black text-white pr-10 pl-10 lg:pr-32 lg:pl-32 pb-5 pt-5">
+        <div id="company" class="bg-black text-white pr-10 pl-10 lg:pr-32 lg:pl-32 pb-5 pt-5">
             <div class="flex flex-col gap-10">
                 <div class="flex flex-col items-center gap-4">
                     <h1 class="font-bold text-3xl text-center">Ready to Revolutionize Your Stand-Ups?</h1>
                     <div class="">
-                        <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8">
+                        <a href="https://huddle-testing-exim2.ondigitalocean.app/">
+                            <button class="default-button font-bold flex items-center justify-center gap-4 h-12 lg:h-16 w-36 lg:w-60">Try Huddle Now!<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:w-8 lg:h-8">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                         </svg></button>
+                        </a>
                     </div>
                 </div>
                 <div class="h-0.5 bg-white w-full lg:w-auto"></div>
                 <div class="text-center flex flex-col gap-4">
                     <p>info@helpeerz.com</p>
                     <p>1700 El Camino Real SPC 11-7 South San Francisco CA 94080, USA</p>
-                    <p><a href="./pages/terms-and-condition.html">Terms and Conditions</a> | <a href="./pages/privacy-notice.html">Privacy Statement</a></p>
+                    <p><a href="./pages/terms-and-condition.html" class="hover:text-customYellow">Terms and Conditions</a> | <a href="./pages/privacy-notice.html" class="hover:text-customYellow">Privacy Statement</a></p>
                     <p>Copyright © Huddle by HelpeerZ 2024 All Rights Reserved</p>
                 </div>
             </div>
+        </div>
+
+        <div class="fixed bottom-10 right-10">
+            <button class="bg-customYellow hover:bg-yellow-200 font-bold py-4 px-4 rounded-full shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                </svg>                  
+            </button>
         </div>
     </div>
 </body>
