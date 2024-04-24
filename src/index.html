@@ -48,7 +48,7 @@
                 </div>
             </section>
         </div>
-        <div class="side-nav md:hidden">
+        <div class="side-nav md:hidden hidden">
             <div id="sideNav" class="bg-gray-900 text-white md:hidden">
                 <div class="p-6 h-screen">
                     <p class="border-b-2 border-transparent cursor-pointer mb-4">
@@ -218,19 +218,6 @@
         sideNav.classList.toggle('hidden');
     });
 
-    const resizeObserver = new ResizeObserver(entries => {
-        for (let entry of entries) {
-            if (entry.contentBoxSize) {
-                const isButtonHidden = entry.contentBoxSize[0].inlineSize === 0;
-                if (isButtonHidden) {
-                    sideNav.classList.add('hidden');
-                }
-            }
-        }
-    });
-
-    resizeObserver.observe(mobileMenuBtn);
-
     var images = [
         "https://s3-alpha-sig.figma.com/img/6e36/8e58/ff0025be11da1a2ff7fd61b8db13098f?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cjwDzXMszfAIiHN3tq5ScWJTilfO~xB27CQZoSqiSTBjgxNFvI7a6E5Pxp3BtYR0Wrt2njpZCa3dW7UGxd52BqOX0Np~CNiFDQoVnDjMkcNJ57njXxta7pBNpOeEB1zGFxAGZ02F4SdjuD7Z747FExTZ1q~0ID7inwIsI~JkpheGWN8uKyQdb~zu8sMW3VKzPnugCZpR9v0WFMm4290MnIQ71Nd0pl7pvP23PYAWC~5yLmmhKNbO2Zyg7xvbmWo93v5lqu5X2BADcQJf5w49lE8piIhy7~HowShtrVabxqxIY3BWTnUlKqXIPpkKLuGF7-dKoI7rr~oJitGEPXYYng__",
         "https://catinaflat.blog/wp-content/uploads/2024/01/scottish-fold-cat.jpg",
@@ -260,6 +247,30 @@
         });
     });
 
+    // Function to toggle side navigation visibility
+    function toggleSideNav() {
+        sideNav.classList.toggle('hidden');
+    }
+
+    // Event listener for burger menu button click
+    burgerMenuBtn.addEventListener('click', function() {
+            toggleSideNav();
+        });
+
+        mobileMenuBtn.addEventListener('click', function() {
+            toggleSideNav();
+        });
+
+    window.addEventListener('scroll', function() {
+  // Check if the user has scrolled down
+        if (window.scrollY > -1) {
+            // If scrolled down, hide the div
+            sideNav.classList.add('hidden');
+        } else {
+            // If at the top, show the div
+            sideNav.classList.remove('hidden');
+        }
+    });
 </script>
 
 </html>
