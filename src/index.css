@@ -23,3 +23,7 @@
 .nav {
     flex-grow: 1; /* Allow the main content to grow and fill remaining space */
 }
+
+.active {
+    font-weight: bolder;
+}

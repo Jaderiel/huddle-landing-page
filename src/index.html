@@ -145,9 +145,9 @@
                     </div>
                 </div>
                 <div class="flex justify-center pt-4">
-                    <nav>
+                    <nav id="company">
                         <ul class="pagination flex gap-4">
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                         </ul>
@@ -177,7 +177,7 @@
             </div>
         </div>
 
-        <div id="company" class="bg-black text-white pr-10 pl-10 lg:pr-32 lg:pl-32 pb-5 pt-5">
+        <div class="bg-black text-white pr-10 pl-10 lg:pr-32 lg:pl-32 pb-5 pt-5">
             <div class="flex flex-col gap-10">
                 <div class="flex flex-col items-center gap-4">
                     <h1 class="font-bold text-3xl text-center">Ready to Revolutionize Your Stand-Ups?</h1>
@@ -231,22 +231,35 @@
     function nextImage() {
         currentIndex = (currentIndex + 1) % images.length;
         teamImage.src = images[currentIndex];
+        setActivePageItem(currentIndex); // Set active class for pagination
     }
 
     function previousImage() {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
         teamImage.src = images[currentIndex];
+        setActivePageItem(currentIndex); // Set active class for pagination
     }
 
-    document.querySelectorAll('.pagination .page-item').forEach((item, index) => {
-        item.addEventListener('click', (event) => {
-            event.preventDefault(); 
-            currentIndex = index; 
-            teamImage.src = images[currentIndex];
-            updatePageNumbers(currentIndex); 
-            animatePageChange(currentIndex); 
+    function setActivePageItem(index) {
+        // Remove 'active' class from all page items
+        document.querySelectorAll('.pagination .page-item').forEach((item) => {
+            item.classList.remove('active');
         });
+
+        // Add 'active' class to the page item corresponding to the current index
+        document.querySelectorAll('.pagination .page-item')[index].classList.add('active');
+    }
+
+document.querySelectorAll('.pagination .page-item').forEach((item, index) => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log('Page item clicked:', index);
+        currentIndex = index; 
+        teamImage.src = images[currentIndex];
+        setActivePageItem(currentIndex); // Set active class for pagination
     });
+});
+
 
     // Function to toggle side navigation visibility
     function toggleSideNav() {
@@ -272,6 +285,8 @@
             sideNav.classList.remove('hidden');
         }
     });
+
+    
 </script>
 
 </html>
