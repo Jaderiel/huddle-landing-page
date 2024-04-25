@@ -874,6 +874,22 @@ video {
   padding-top: 8rem;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1003,6 +1019,10 @@ video {
 
   .sm\:pt-28 {
     padding-top: 7rem;
+  }
+
+  .sm\:pr-10 {
+    padding-right: 2.5rem;
   }
 }
 
