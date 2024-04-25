@@ -274,16 +274,26 @@ document.querySelectorAll('.pagination .page-item').forEach((item, index) => {
             toggleSideNav();
         });
 
+
+    let prevScrollPos = window.pageYOffset;
+
+
     window.addEventListener('scroll', function() {
-  // Check if the user has scrolled down
-        if (window.scrollY > -1) {
-            // If scrolled down, hide the div
+
+        let currentScrollPos = window.pageYOffset;
+
+
+        if (prevScrollPos > currentScrollPos) {
+
             sideNav.classList.add('hidden');
         } else {
-            // If at the top, show the div
-            sideNav.classList.remove('hidden');
+
+            sideNav.classList.add('hidden');
         }
+
+        prevScrollPos = currentScrollPos;
     });
+
 
     
 </script>
